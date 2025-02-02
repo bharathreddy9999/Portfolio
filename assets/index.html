@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Portfolio</title>
     <link rel="stylesheet" href="style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
     <link rel="stylesheet" href="mediaqueries.css" />
   </head>
   <body>
@@ -17,6 +19,7 @@
           <li><a href="#experience">Experience</a></li>
           <li><a href="#projects">Projects</a></li>
           <li><a href="#contact">Contact</a></li>
+          <li><button id="theme-toggle" class="theme-btn">🌓</button></li>
         </ul>
        </div>
     </nav>
@@ -34,7 +37,9 @@
           <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
           <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
         </div>
-      </div>
+      </div><h1 class="hero-title">
+        I'm a <span class="txt-rotate" data-rotate='[ "AI-Augmented Developer", "Prompt Engineer", "Full Stack Hacker" ]'></span>
+      </h1>
     </nav>
     <section id="profile">
       <div class="section__pic-container">
@@ -211,7 +216,20 @@
         onclick="location.href='./#projects'"
       />
     </section>
-    <section id="projects">
+    <section id="projects"><div class="project-card">
+      <div class="project-front">
+        <h3>Stock Prediction</h3>
+        <img src="project1.jpg" alt="Stock Prediction">
+      </div>
+      <div class="project-back">
+        <h4>AI Tools Used</h4>
+        <div class="ai-badges">
+          <span class="badge copilot">GitHub Copilot</span>
+          <span class="badge gpt">GPT-4</span>
+        </div>
+        <p><strong>Prompt Example:</strong><br>"Generate LSTM code for stock trend analysis..."</p>
+      </div>
+    </div>
       <p class="section__text__p1">Browse My Recent</p>
       <h1 class="title">Projects</h1>
       <div class="experience-details-container">
@@ -304,6 +322,10 @@
           <p><a href="https://www.linkedin.com/in/pippalla-bharath-kumar-reddy-08a32b235/">LinkedIn</a></p>
           <p><a href="tel:+917569716620">+917569716620</a></p>
         </div>
+      </div><div class="chatbot">
+        <div class="chat-header">AI Assistant</div>
+        <div class="chat-messages"></div>
+        <input type="text" placeholder="Ask about my projects...">
       </div>
     </section>
     <footer>
